@@ -12,4 +12,4 @@ LayersControl is a control inspired by [maplibre-gl-opacity](https://github.com/
 <img width="1095" height="684" alt="imagen" src="https://github.com/user-attachments/assets/dced147d-f3b7-4c4d-b407-9a41ad50568b" />
 
 ## Ecosystem
-LayersControl is part of the mvt-proj ecosystem, along with MVT Server and MapLibre Legend.
+LayersControl is part of the mvt-proj ecosystem, along with [MVT Server](https://github.com/mvt-proj/mvt-rs) and [MapLibre Legend](https://github.com/mvt-proj/maplibre-legend).
