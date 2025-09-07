@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",                       // Evita "ES20217"
+    "lib": ["ES2021", "DOM"],                 // Incluye Promise, fetch, DOM APIs…
+    "module": "UMD",                          // Si de verdad necesitas UMD; si no, podrías usar "ESNext" o "CommonJS"
+    "moduleResolution": "node",               // Búsqueda de módulos estilo Node.js
+    "declaration": true,                      // Genera .d.ts
+    "declarationMap": true,                   // Mapas para .d.ts
+    "outDir": "dist",                         // Carpeta de salida
+    "rootDir": "src",                         // Carpeta raíz de tu código
+    "strict": true,                           // Habilita todas las comprobaciones estricas
+    "noImplicitAny": true,                    // Evita "any" implícito
+    "strictNullChecks": true,                 // Controles de null/undefined
+    "strictFunctionTypes": true,              // Verifica contravarianza/covarianza
+    "strictPropertyInitialization": true,     // Propiedades no inicializadas en clases
+    "noUnusedLocals": true,                   // Variables sin usar
+    "noUnusedParameters": true,               // Parámetros sin usar
+    "noFallthroughCasesInSwitch": true,       // Case fall-through
+    "skipLibCheck": true,                     // Acelera compilación de dependencias
+    "esModuleInterop": true,                  // Permite default imports de CommonJS
+    "forceConsistentCasingInFileNames": true, // Cuida mayúsculas en imports
+    "incremental": true                       // Guarda info para compilaciones más rápidas
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]         // No compilar dependencias ni salida
+}

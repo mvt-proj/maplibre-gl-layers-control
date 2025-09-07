@@ -1,0 +1,22 @@
+{
+  "name": "layers-control",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx live-server --open=example",
+    "build": "esbuild src/LayersControl.ts --format=iife --outfile=dist/maplibre-gl-layers-control.js --sourcemap",
+    "build:min": "esbuild src/LayersControl.ts --format=iife --outfile=dist/maplibre-gl-layers-control.min.js --sourcemap --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "BSD 3",
+  "packageManager": "pnpm@10.15.1+sha256.8c53af02ae3ec1fb0ae75377f8d4d6217c2d7cbe6f03c16350cabf7493de6eff",
+  "dependencies": {
+    "maplibre-gl": "^5.7.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9",
+    "typescript": "^5.9.2"
+  }
+}
