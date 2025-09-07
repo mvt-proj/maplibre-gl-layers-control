@@ -36,8 +36,13 @@
         zoom: 1,
       });
 
+      const labels = {
+        "countries-fill": "Countries",
+      }
+
       let layersControl = new LayersControl({
         title: 'Layers',
+        customLabels: labels,
       });
       map.addControl(layersControl, "bottom-left");
     </script>

@@ -92,12 +92,14 @@ const defaultStyles = `
 
 type LayersControlOptions = {
   title?: string;
+  customLabels?: Record<string, string>;
   legendServiceUrl?: string;
   opacityControl: boolean;
 };
 
 const defaultOptions: LayersControlOptions = {
   title: 'Layers Control',
+  customLabels: {},
   legendServiceUrl: undefined,
   opacityControl: false,
 };
@@ -109,11 +111,13 @@ class LayersControl implements IControl {
   private toggleBtn!: HTMLButtonElement;
 
   private title?: string;
+  private customLabels: Record<string, string>;
   private legendServiceUrl?: string;
   private opacityControlOption: boolean;
 
   constructor(options: Partial<LayersControlOptions>) {
     this.title = options.title ?? defaultOptions.title;
+    this.customLabels = options.customLabels ?? defaultOptions.customLabels!;
     this.legendServiceUrl = options.legendServiceUrl;
     this.opacityControlOption = options.opacityControl ?? defaultOptions.opacityControl;
   }
@@ -154,7 +158,10 @@ class LayersControl implements IControl {
     // @ts-ignore: implicit any
     layers.slice().reverse().forEach((layer) => {
       const { id, type, metadata } = layer;
-      const labelTitle = layer.metadata?.alias ?? id;
+      const labelTitle =
+        this.customLabels[id] ??
+        metadata?.alias ??
+        id;
       const group = document.createElement('div');
       group.className = 'layer-group';
 
