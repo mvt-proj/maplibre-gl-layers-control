@@ -78,6 +78,23 @@ LayersControl is a control inspired by [maplibre-gl-opacity](https://github.com/
 
 <img width="1028" height="921" alt="imagen" src="https://github.com/user-attachments/assets/d41ed7e3-c940-4a14-9cdd-6094e1cd48ed" />
 
+### With Custom Labels
+
+```js
+
+      const labels = {
+        "countries-fill": "Countries",
+      }
+
+      let layersControl = new LayersControl({
+        title: 'Layers',
+        customLabels: labels,
+      });
+      map.addControl(layersControl, "bottom-left");
+```
+
+<img width="960" height="958" alt="imagen" src="https://github.com/user-attachments/assets/c4b51517-87b2-44ad-8176-bf027860e5a2" />
+
 
 ### With Legends Information
 
